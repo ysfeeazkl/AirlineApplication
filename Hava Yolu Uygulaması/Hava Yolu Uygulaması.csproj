@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{468C8232-EF86-4B60-8058-2E21E6A44BC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hava_Yolu_Uygulaması</RootNamespace>
+    <AssemblyName>Hava Yolu Uygulaması</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Sayfalar\AdminPaneli.xaml.cs">
+      <DependentUpon>AdminPaneli.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sayfalar\AdminSayfası.xaml.cs">
+      <DependentUpon>AdminSayfası.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sayfalar\AdminUçuşEkle.xaml.cs">
+      <DependentUpon>AdminUçuşEkle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sayfalar\AdminUçuşSeferleri.xaml.cs">
+      <DependentUpon>AdminUçuşSeferleri.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sayfalar\BiletAl.xaml.cs">
+      <DependentUpon>BiletAl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sayfalar\GirişEkranı.xaml.cs">
+      <DependentUpon>GirişEkranı.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sayfalar\UçuşSeferleri.xaml.cs">
+      <DependentUpon>UçuşSeferleri.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sınıflar\Admin.cs" />
+    <Compile Include="Sınıflar\BiletAlSınıf.cs" />
+    <Compile Include="Sınıflar\UçuşSeferi.cs" />
+    <Compile Include="Sınıflar\Veri.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Sayfalar\AdminPaneli.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sayfalar\AdminSayfası.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sayfalar\AdminUçuşEkle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sayfalar\AdminUçuşSeferleri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sayfalar\BiletAl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sayfalar\GirişEkranı.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sayfalar\UçuşSeferleri.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="KocaKafalar\Females\.DS_Store" />
+    <None Include="KocaKafalar\Females\Thumbs.db" />
+    <None Include="KocaKafalar\Males\.DS_Store" />
+    <None Include="KocaKafalar\Males\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\BiletAl.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\Qatar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\Pegasus.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\TürkHavaYolları.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\images %288%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\images %289%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\images %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\unnamed %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resimler\images %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="KocaKafalar\Females\FA01.png" />
+    <Resource Include="KocaKafalar\Females\FA02.png" />
+    <Resource Include="KocaKafalar\Females\FA03.png" />
+    <Resource Include="KocaKafalar\Females\FA04.png" />
+    <Resource Include="KocaKafalar\Females\FA05.png" />
+    <Resource Include="KocaKafalar\Females\FB01.png" />
+    <Resource Include="KocaKafalar\Females\FB02.png" />
+    <Resource Include="KocaKafalar\Females\FB03.png" />
+    <Resource Include="KocaKafalar\Females\FB04.png" />
+    <Resource Include="KocaKafalar\Females\FB05.png" />
+    <Resource Include="KocaKafalar\Females\FC01.png" />
+    <Resource Include="KocaKafalar\Females\FC02.png" />
+    <Resource Include="KocaKafalar\Females\FC03.png" />
+    <Resource Include="KocaKafalar\Females\FC04.png" />
+    <Resource Include="KocaKafalar\Females\FC05.png" />
+    <Resource Include="KocaKafalar\Females\FD01.png" />
+    <Resource Include="KocaKafalar\Females\FD02.png" />
+    <Resource Include="KocaKafalar\Females\FD03.png" />
+    <Resource Include="KocaKafalar\Females\FD04.png" />
+    <Resource Include="KocaKafalar\Females\FD05.png" />
+    <Resource Include="KocaKafalar\Females\FE01.png" />
+    <Resource Include="KocaKafalar\Females\FE02.png" />
+    <Resource Include="KocaKafalar\Females\FE03.png" />
+    <Resource Include="KocaKafalar\Females\FE04.png" />
+    <Resource Include="KocaKafalar\Females\FE05.png" />
+    <Resource Include="KocaKafalar\Females\FG01.png" />
+    <Resource Include="KocaKafalar\Females\FG02.png" />
+    <Resource Include="KocaKafalar\Females\FG03.png" />
+    <Resource Include="KocaKafalar\Females\FG04.png" />
+    <Resource Include="KocaKafalar\Females\FG05.png" />
+    <Resource Include="KocaKafalar\Females\FH01.png" />
+    <Resource Include="KocaKafalar\Females\FH02.png" />
+    <Resource Include="KocaKafalar\Females\FH03.png" />
+    <Resource Include="KocaKafalar\Females\FH04.png" />
+    <Resource Include="KocaKafalar\Females\FH05.png" />
+    <Resource Include="KocaKafalar\Females\FI01.png" />
+    <Resource Include="KocaKafalar\Females\FI02.png" />
+    <Resource Include="KocaKafalar\Females\FI03.png" />
+    <Resource Include="KocaKafalar\Females\FI04.png" />
+    <Resource Include="KocaKafalar\Females\FI05.png" />
+    <Resource Include="KocaKafalar\Males\A01.png" />
+    <Resource Include="KocaKafalar\Males\A02.png" />
+    <Resource Include="KocaKafalar\Males\A03.png" />
+    <Resource Include="KocaKafalar\Males\A04.png" />
+    <Resource Include="KocaKafalar\Males\A05.png" />
+    <Resource Include="KocaKafalar\Males\B01.png" />
+    <Resource Include="KocaKafalar\Males\B02.png" />
+    <Resource Include="KocaKafalar\Males\B03.png" />
+    <Resource Include="KocaKafalar\Males\B04.png" />
+    <Resource Include="KocaKafalar\Males\B05.png" />
+    <Resource Include="KocaKafalar\Males\Boş.png" />
+    <Resource Include="KocaKafalar\Males\C01.png" />
+    <Resource Include="KocaKafalar\Males\C02.png" />
+    <Resource Include="KocaKafalar\Males\C03.png" />
+    <Resource Include="KocaKafalar\Males\C04.png" />
+    <Resource Include="KocaKafalar\Males\C05.png" />
+    <Resource Include="KocaKafalar\Males\D01.png" />
+    <Resource Include="KocaKafalar\Males\D02.png" />
+    <Resource Include="KocaKafalar\Males\D03.png" />
+    <Resource Include="KocaKafalar\Males\D04.png" />
+    <Resource Include="KocaKafalar\Males\D05.png" />
+    <Resource Include="KocaKafalar\Males\E01.png" />
+    <Resource Include="KocaKafalar\Males\E02.png" />
+    <Resource Include="KocaKafalar\Males\E03.png" />
+    <Resource Include="KocaKafalar\Males\E04.png" />
+    <Resource Include="KocaKafalar\Males\E05.png" />
+    <Resource Include="KocaKafalar\Males\F01.png" />
+    <Resource Include="KocaKafalar\Males\F02.png" />
+    <Resource Include="KocaKafalar\Males\F03.png" />
+    <Resource Include="KocaKafalar\Males\F04.png" />
+    <Resource Include="KocaKafalar\Males\F05.png" />
+    <Resource Include="KocaKafalar\Males\G01.png" />
+    <Resource Include="KocaKafalar\Males\G02.png" />
+    <Resource Include="KocaKafalar\Males\G03.png" />
+    <Resource Include="KocaKafalar\Males\G04.png" />
+    <Resource Include="KocaKafalar\Males\G05.png" />
+    <Resource Include="KocaKafalar\Males\H01.png" />
+    <Resource Include="KocaKafalar\Males\H02.png" />
+    <Resource Include="KocaKafalar\Males\H03.png" />
+    <Resource Include="KocaKafalar\Males\H04.png" />
+    <Resource Include="KocaKafalar\Males\H05.png" />
+    <Resource Include="KocaKafalar\Males\I01.png" />
+    <Resource Include="KocaKafalar\Males\I02.png" />
+    <Resource Include="KocaKafalar\Males\I03.png" />
+    <Resource Include="KocaKafalar\Males\I04.png" />
+    <Resource Include="KocaKafalar\Males\I05.png" />
+    <Resource Include="KocaKafalar\Males\J01.png" />
+    <Resource Include="KocaKafalar\Males\J02.png" />
+    <Resource Include="KocaKafalar\Males\J03.png" />
+    <Resource Include="KocaKafalar\Males\J04.png" />
+    <Resource Include="KocaKafalar\Males\J05.png" />
+    <Resource Include="KocaKafalar\Males\K01.png" />
+    <Resource Include="KocaKafalar\Males\K02.png" />
+    <Resource Include="KocaKafalar\Males\K03.png" />
+    <Resource Include="KocaKafalar\Males\K04.png" />
+    <Resource Include="KocaKafalar\Males\K05.png" />
+    <Resource Include="KocaKafalar\Males\L01.png" />
+    <Resource Include="KocaKafalar\Males\L02.png" />
+    <Resource Include="KocaKafalar\Males\L03.png" />
+    <Resource Include="KocaKafalar\Males\L04.png" />
+    <Resource Include="KocaKafalar\Males\L05.png" />
+    <Resource Include="KocaKafalar\Males\M01.png" />
+    <Resource Include="KocaKafalar\Males\M02.png" />
+    <Resource Include="KocaKafalar\Males\M03.png" />
+    <Resource Include="KocaKafalar\Males\M04.png" />
+    <Resource Include="KocaKafalar\Males\M05.png" />
+    <Resource Include="KocaKafalar\Males\N01.png" />
+    <Resource Include="KocaKafalar\Males\N02.png" />
+    <Resource Include="KocaKafalar\Males\N03.png" />
+    <Resource Include="KocaKafalar\Males\N04.png" />
+    <Resource Include="KocaKafalar\Males\N05.png" />
+    <Resource Include="KocaKafalar\Males\O01.png" />
+    <Resource Include="KocaKafalar\Males\O02.png" />
+    <Resource Include="KocaKafalar\Males\O03.png" />
+    <Resource Include="KocaKafalar\Males\O04.png" />
+    <Resource Include="KocaKafalar\Males\O05.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

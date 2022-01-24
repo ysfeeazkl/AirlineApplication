@@ -1,0 +1,44 @@
+﻿<Page x:Class="Hava_Yolu_Uygulaması.Sayfalar.UçuşSeferleri"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hava_Yolu_Uygulaması.Sayfalar"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UçuşSeferleri">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Uçuş Numarası İle Arama" FontSize="18" Foreground="Black" FontFamily="Palatino Linotype" Margin="5"/>
+        <TextBox x:Name="TxtAra" Grid.Row="0" Grid.Column="1" Margin="5"/>
+        
+        <DataGrid x:Name="DgListele" Grid.Row="1"  Grid.Column="0" Grid.ColumnSpan="2" IsEnabled="False" Padding="10,0,10,0" Margin="5" Foreground="OrangeRed" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Tarih"  Foreground="Black" Binding="{Binding UçuşTarihi,StringFormat=dd:MM:yyyy}"/>
+                <DataGridTextColumn Header="Kalkış Saati" Binding="{Binding KalkışSaati}" Foreground="Black"/>
+
+                <DataGridTemplateColumn Header="Hava Yolu">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding HavaYolu}" Width="150" Height="50"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Uçuş NO" Binding="{Binding UçuşNO}" Foreground="Black"/>
+                <DataGridTextColumn Header="Kalkacağı Konum" Binding="{Binding KalkacağıKonum}" Foreground="Black"/>
+                <DataGridTextColumn Header="Varacağı Konum" Binding="{Binding VaracağıKonum}" Foreground="Black"/>
+                <DataGridTextColumn Header="Bagaj Kapistesi" Binding="{Binding BagajKapistesi}" Foreground="Black" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+    </Grid>
+</Page>

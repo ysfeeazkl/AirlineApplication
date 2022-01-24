@@ -1,0 +1,111 @@
+﻿<Page x:Class="Hava_Yolu_Uygulaması.Sayfalar.BiletAl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hava_Yolu_Uygulaması.Sayfalar"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BiletAl">
+
+    <Grid Background="PapayaWhip">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="154*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="0" Grid.RowSpan="2">
+            <StackPanel Grid.Column="0" Background="#FFEEB248" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <TextBlock Text="Bilet Al" Background="#FFFF6800" Foreground="WhiteSmoke" FontFamily="Mongolian Baiti" FontSize="36" Margin="0,0,0,15"/>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <RadioButton x:Name="RbGidişDönüş" Margin="3"/>
+                    <TextBlock Text="Gidiş-Dönüş" Width="100" FontSize="18" Margin="0,0,15,0"/>
+                    <RadioButton x:Name="RbTekYön" Margin="3"/>
+                    <TextBlock Text="Tek Gidiş" Width="100" FontSize="18"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Ad-Soyad" FontSize="26" Margin="0,0,15,0" Width="150"/>
+                    <TextBox x:Name="TxtAdSoyad" Width="180"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Uçuş-Kodu" FontSize="26" Margin="0,0,15,0" Width="150"/>
+                    <ComboBox x:Name="CbUçuşKodu" Width="180"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Yetişkinler" TextAlignment="Left" FontSize="22" Width="150"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="YetişkinEksiltme" Content="-" VerticalContentAlignment="Center" FontSize="36" HorizontalContentAlignment="Center" Width="50" Height="50" Margin="15,0" IsEnabled="False"/>
+                        <TextBlock x:Name="TxtYetişkinlerSayacı" Width="50" Text="0" FontSize="34" TextAlignment="Center"/>
+                        <Button x:Name="YetişkenArttırma" Content="+" VerticalContentAlignment="Center" FontSize="36" HorizontalContentAlignment="Center" Width="50" Height="50" Margin="15,0" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Çocuklar(2-12)" TextAlignment="Left" FontSize="22" Width="150"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="ÇocukEksiltme" Content="-" VerticalContentAlignment="Center" FontSize="36" HorizontalContentAlignment="Center" Width="50" Height="50" Margin="15,0" IsEnabled="False"/>
+                        <TextBlock x:Name="TxtÇocukSayacı" Width="50" Text="0" FontSize="34" TextAlignment="Center"/>
+                        <Button x:Name="ÇocukArttırma" Content="+" VerticalContentAlignment="Center" FontSize="36" HorizontalContentAlignment="Center" Width="50" Height="50" Margin="15,0"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Bebek" TextAlignment="Left" FontSize="22" Width="150"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BebekEksiltme" Content="-" VerticalContentAlignment="Center" FontSize="36" HorizontalContentAlignment="Center" Width="50" Height="50" Margin="15,0" IsEnabled="False"/>
+                        <TextBlock x:Name="TxtBebekSayacı" Width="50" Text="0" FontSize="34" TextAlignment="Center"/>
+                        <Button x:Name="BebekArttırma" Content="+" VerticalContentAlignment="Center" FontSize="36" HorizontalContentAlignment="Center" Width="50" Height="50" Margin="15,0"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Text="Tutar Hesapla" FontSize="24" Margin="0,0,10,0"/>
+                    <Button x:Name="BtnTutarHesapla" Content="Hesapla" Margin="10,0,15,0" FontWeight="Bold"/>
+                    <TextBlock x:Name="TbTutar" HorizontalAlignment="Right" Width="100" Foreground="Red" TextAlignment="Center" IsEnabled="False"/>
+                </StackPanel>
+                <Button x:Name="BtnKaydet" Content="Kaydet" Width="150" BorderBrush="IndianRed" FontWeight="UltraBold" BorderThickness="3" Height="50">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="15,0,15,0"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Viewbox>
+        <StackPanel Grid.Column="1" Margin="10" Width="420">
+            <TextBlock Text="Diğer Aldığın Biletlerin" FontSize="32" TextAlignment="Center" Margin="0,0,0,10" Background="#FF030A03" Foreground="#FFFFAB18"/>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Margin="5" Text="Ad-Soyad Giriniz:" FontSize="24"/>
+                <TextBox x:Name="TxtArama" Margin="5" Width="150"/>
+                <Button x:Name="BtnAra" Width="50" Margin="1">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Resimler/images (2).png"/>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+        <ListBox x:Name="LbListele" Grid.Column="1" Grid.Row="1" Width="420" HorizontalAlignment="Center"  Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="GhostWhite" Padding="3" Width="400">
+                        <StackPanel HorizontalAlignment="Center" Background="Red">
+                            <Image Height="128" Source="{Binding uçuş.HavaYolu}" Margin="0,0,0,5"/>
+                            <TextBlock Text="Ad Soyad:" FontSize="16"/>
+                            <TextBlock Text="{Binding AdSoyad}" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontWeight="DemiBold" FontSize="18" Margin="0,0,0,5"/>
+                            <TextBlock Text="Nereden" FontSize="12" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding uçuş.KalkacağıKonum}" FontSize="16" HorizontalAlignment="Center" FontWeight="DemiBold" Foreground="WhiteSmoke" Margin="0,0,0,5"/>
+                            <TextBlock Text="Nereye" FontSize="12" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding uçuş.VaracağıKonum}" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontSize="16" FontWeight="DemiBold" Margin="0,0,0,5"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="MiSilEt" Header="Bilet Sil"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+    </Grid>
+</Page>
